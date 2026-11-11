@@ -42,3 +42,57 @@ function drawFace(n) {
       break;
   }
 }
+
+function draw1() {
+  var dotx;
+  var doty;
+  ctx.beginPath();
+  dotx = dicex + 0.5 * diceWidth;
+  doty = dicey + 0.5 * diceHeight;
+  ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.fil();
+}
+
+function draw2() {
+  var dotx;
+  var doty;
+  ctx.beginPath();
+  dotx = dicex + 3 * dotrad;
+  doty = dicey + 3 * dotrad;
+  ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  dotx = dicex + diceWidth - 3 * dotrad;
+  doty = dicey + diceHeight - 3 * dotrad;
+  ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.fil();
+}
+
+function draw4() {
+  draw2();
+  var dotx;
+  var doty;
+  ctx.beginPath();
+  dotx = dicex + 3 * dotrad;
+  doty = dicey + diceHeight - 3 * dotrad;
+  ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  dotx = dicex + diceWidth - 3 * dotrad;
+  doty = dicey + 3 * dotrad;
+  ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function draw2mid() {
+  // var dotx;
+  // var doty;
+  // ctx.beginPath();
+  // dotx = dicex + 3 * dotrad;
+  // doty = dicey + 0.5 * diceHeight;
+  // ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  // dotx = dicex + 0.5 * diceHeight;
+  // doty = dicey + 3 * dotrad;
+  // ctx.arc(dotx, doty, dotrad, 0, Math.PI * 2, true);
+  // ctx.closePath();
+  // ctx.fill();
+}
